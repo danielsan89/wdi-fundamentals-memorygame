@@ -22,10 +22,22 @@ After saving any changes to main.js, open your index.html file in Sublime Text, 
 After the web page loads, you can go to View > Developer > Developer Tools and click on the console panel. You should see two messages displayed in the console! 
 */
 
-var cardOne = "queen";
-var cardTwo = "king";
-var cardThree = "king";
-var cardFour = "queen";	
 
-console.log("User flipped " +cardOne);
-console.log("User flipped " +cardTwo);
+
+var cards = ["queen", "queen", "king", "king"];
+var cardsInPlay = [];
+var card0ne = cards[0];
+cardsInPlay.push(card0ne);
+var cardTwo = cards[2];
+cardsInPlay.push(cardTwo);
+if (cardsInPlay.length === 2){
+	console.log("User flipped "+cardsInPlay[0]);
+	console.log("User flipped "+cardsInPlay[1]);
+	if(cardsInPlay[0] === cardsInPlay[1]){
+		alert("You found a match!");
+	}
+	else
+		alert("Sorry try again...");
+}
+
+
