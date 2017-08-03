@@ -38,5 +38,7 @@ var checkForMath = function(){
 }
 
 flipCard(0);
+flipCard(3);
+checkForMath();
 
 
