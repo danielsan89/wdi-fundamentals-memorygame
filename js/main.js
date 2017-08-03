@@ -22,22 +22,59 @@ After saving any changes to main.js, open your index.html file in Sublime Text, 
 After the web page loads, you can go to View > Developer > Developer Tools and click on the console panel. You should see two messages displayed in the console! 
 */
 
+/*
+rank	suit	cardImage
+"queen"	"hearts"	"images/queen-of-hearts.png"
+"queen"	"diamonds"	"images/queen-of-diamonds.png"
+"king"	"hearts"	"images/king-of-hearts.png"
+"king"	"diamonds"	"images/king-of-diamonds.png"
+*/
 
-
-var cards = ["queen", "queen", "king", "king"];
-var cardsInPlay = [];
-var card0ne = cards[0];
-cardsInPlay.push(card0ne);
-var cardTwo = cards[2];
-cardsInPlay.push(cardTwo);
-if (cardsInPlay.length === 2){
-	console.log("User flipped "+cardsInPlay[0]);
-	console.log("User flipped "+cardsInPlay[1]);
-	if(cardsInPlay[0] === cardsInPlay[1]){
-		alert("You found a match!");
+var cards = [
+	{
+		rank: 'queen',
+		suit: 'hearts',
+		cardImage: 'images/queen-of-hearts.png'
+	},
+	{
+		rank: 'queen',
+		suit: 'diamonds',
+		cardImage: 'images/queen-of-diamonds.png'
+	},
+	{
+		rank: 'king',
+		suit: 'hearts',
+		cardImage: 'images/king-of-hearts.png'
+	},
+	{
+		rank: 'king',
+		suit: 'diamonds',
+		cardImage: 'images/king-of-diamonds.png'
 	}
-	else
-		alert("Sorry try again...");
+];
+var cardsInPlay = [];
+var flipCard= function(cardId){
+	/*var card0ne = cards[0];
+	cardsInPlay.push(card0ne);
+	var cardTwo = cards[2];
+	cardsInPlay.push(cardTwo);*/
+	console.log("User flipped "+cards[cardId]);
+	cardsInPlay.push(cards[cardId]);
+	
+
 }
+var checkForMath = function(){
+	if (cardsInPlay.length === 2){
+		//console.log("User flipped "+cardsInPlay[0]);
+		//console.log("User flipped "+cardsInPlay[1]);
+		if(cardsInPlay[0] === cardsInPlay[1]){
+			alert("You found a match!");
+		}
+		else
+			alert("Sorry try again...");
+	}	
+}
+
+flipCard(0);
 
 
