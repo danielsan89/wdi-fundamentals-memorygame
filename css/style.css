@@ -11,7 +11,6 @@ h1{
 }
 nav{
 	background-color: #00a6b3;
-	color: white;
 	text-transform: uppercase;
 	padding: 20px 0 20px 0;
 
@@ -19,7 +18,7 @@ nav{
 
 a{
 	font-family: "RALEWAY";
-	color: #f15b31;
+	color: white;
 	letter-spacing: 1px;
 	font-weight: 600;
 	font-size: 18px;
@@ -28,7 +27,7 @@ a{
 	margin: 0 20px 0 20px;
 }
 a:hover {
-  color: white;
+  color: #f15b31;
 }
 	
 
@@ -94,4 +93,7 @@ footer{
 .name{
 	color: #f15b31;
 	font-weight: 700;
+}
+img,.board_clearfix{
+	margin:0 10px 0 10px;
 }
